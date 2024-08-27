@@ -1,0 +1,235 @@
+body {
+    width: 400px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-theme {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #cookieList, #authView {
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .dark-theme #cookieList, .dark-theme #authView {
+    background-color: #444;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+  }
+  
+  .cookie-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .dark-theme .cookie-item {
+    background-color: #555;
+  }
+  
+  .cookie-name {
+    font-weight: bold;
+    display: block;
+  }
+  
+  .cookie-type {
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+  }
+  
+  .dark-theme .cookie-type {
+    color: #aaa;
+  }
+  
+  .cookie-type.session {
+    color: #4CAF50;
+  }
+  
+  .cookie-value {
+    display: block;
+    word-break: break-all;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+  
+  .auth-cookie {
+    display: inline-block;
+    background-color: #ffd700;
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  
+  .export-buttons {
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* Theme-specific styles */
+  .dark-theme button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .dark-theme #cookieList,
+  .dark-theme #authView {
+    background-color: #444;
+    color: #f0f0f0;
+  }
+  
+  .dark-theme .cookie-item {
+    background-color: #555;
+    color: #f0f0f0;
+  }
+  
+  .dark-theme .cookie-type {
+    color: #aaa;
+  }
+  
+  .dark-theme .auth-cookie {
+    background-color: #ffd700;
+    color: #333;
+  }
+  
+  /* Light theme specific styles */
+  body:not(.dark-theme) button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  body:not(.dark-theme) #cookieList,
+  body:not(.dark-theme) #authView {
+    background-color: white;
+    color: #333;
+  }
+  
+  body:not(.dark-theme) .cookie-item {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  body:not(.dark-theme) .cookie-type {
+    color: #666;
+  }
+  
+  body:not(.dark-theme) .auth-cookie {
+    background-color: #ffd700;
+    color: #333;
+  }

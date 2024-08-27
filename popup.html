@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Cap</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <img src="icon48.png" alt="Cookie Capturer Icon" class="icon">
+    <h1>Cookie Capturer</h1>
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <div id="mainView">
+    <button id="captureCookies">Capture Cookies</button>
+    <button id="viewAuthCookies">View Auth Cookies</button>
+    <div id="cookieList" class="hidden">
+      <h2>Captured Cookies:</h2>
+      <div id="cookieContent"></div>
+    </div>
+    <div class="export-buttons">
+      <button id="exportNames">Export Cookie Names</button>
+      <button id="exportFull">Export Full Cookies</button>
+    </div>
+  </div>
+  <div id="authView" class="hidden">
+    <button id="backButton">Back</button>
+    <h2>Auth Cookies and Tokens:</h2>
+    <div id="authCookieContent"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
